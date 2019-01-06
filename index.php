@@ -111,7 +111,7 @@ sort($files);
 <script type="text/javascript" src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="//apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    var $imgs = [<?PHP foreach ($files as $f) {echo '"' . $fol . $f . '",' . PHP_EOL;}?>];
+    var $imgs = [<?PHP foreach ($files as $f) {echo '"' . BASEURL . 'photos' . $fol . $f . '",' . PHP_EOL;}?>];
     var x = 0;
     var y = 0;
     var l = 0;
