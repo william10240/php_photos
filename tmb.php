@@ -101,7 +101,7 @@ function save2cache($imagePath, $final_image) {
     $imagePath=md5($imagePath);
     $memcache_obj = new Redis();
     $memcache_obj->connect('rds', 6379);
-    $memcache_obj->set($imagePath, $final_image);
+    $memcache_obj->setex($imagePath,30, $final_image);
     $memcache_obj->close();
 }
 
