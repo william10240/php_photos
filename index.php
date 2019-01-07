@@ -46,35 +46,10 @@ sort($files);
         .menu div { border: 1px solid #ededed; padding: 0; display: inline-block; }
         .menu .btn { display: inline-block; width: 100px; font-size: 22px; background: none; border: none; color: #fff; cursor: pointer; }
         .menu .btn:hover, .menu .btn.act { color: #e85f6b; }
-        .circular {
-            -webkit-animation: rotate 2s linear infinite;
-            animation: rotate 2s linear infinite;
-            height: 100%;
-            -webkit-transform-origin: center center;
-            transform-origin: center center;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-        .path {
-            stroke-dasharray: 1,200;
-            stroke-dashoffset: 0;
-            -webkit-animation: dash 1.5s ease-in-out infinite,color 6s ease-in-out infinite;
-            animation: dash 1.5s ease-in-out infinite,color 6s ease-in-out infinite;
-            stroke-linecap: round;
-        }
-        @keyframes rotate {
-            to {-webkit-transform: rotate(1turn);transform: rotate(1turn)}
-        }
-        @keyframes dash {
-            0% {stroke-dasharray: 1,200;stroke-dashoffset: 0}
-            50% {stroke-dasharray: 89,200;stroke-dashoffset: -35}
-            to {stroke-dasharray: 89,200;stroke-dashoffset: -124}
-        }
+        .circular {-webkit-animation: rotate 2s linear infinite;animation: rotate 2s linear infinite;height: 100%;-webkit-transform-origin: center center;transform-origin: center center;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
+        .path {stroke-dasharray: 1,200;stroke-dashoffset: 0;-webkit-animation: dash 1.5s ease-in-out infinite,color 6s ease-in-out infinite;animation: dash 1.5s ease-in-out infinite,color 6s ease-in-out infinite;stroke-linecap: round;}
+        @keyframes rotate {to {-webkit-transform: rotate(1turn);transform: rotate(1turn)}}
+        @keyframes dash {0% {stroke-dasharray: 1,200;stroke-dashoffset: 0}50% {stroke-dasharray: 89,200;stroke-dashoffset: -35}to {stroke-dasharray: 89,200;stroke-dashoffset: -124}}
         @keyframes color {0%,to {    stroke: #d62d20}40% {    stroke: #0057e7}66% {    stroke: #008744}80%,90% {    stroke: #ffa700}}
     </style>
 </head>
@@ -249,9 +224,10 @@ sort($files);
         $("#picimg").attr({'style':'display:block;width: 45px; height: 45px;left:45%;top:45%;','src':$loaderimg});
         setTimeout(function(){
             $("#picimg").attr({'data-index': index,'src': $imgs[index]});
+            $("#stu").attr('href','http://image.baidu.com/n/pc_search?queryImageUrl=' + encodeURIComponent(location.origin + $imgs[index]));
         },50);
         
-        // $("#stu").attr('href','http://image.baidu.com/n/pc_search?queryImageUrl=' + encodeURIComponent(location.origin + $("#picimg").attr('src')));
+        
     }
     function hidepic() {
         $dis = false;
