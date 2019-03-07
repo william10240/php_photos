@@ -7,14 +7,18 @@
  */
 
 // url path
-define('BASEURL','/');
+
+ini_set("display_errors","On");
+error_reporting(E_ALL);
+
+define('BASEURL','');
 
 // local path @ linuc
 #define('PHOTOPATH', '/mnt/XiaoMi/Zero/Photos');
 #define('PHOTOTEMPPATH', '/mnt/XiaoMi/Zero/Photos/tmb/');
 
 // local path @windows
-define('PHOTOPATH', '/data');
+define('PHOTOPATH', 'photos');
 define('PHOTOTEMPPATH', PHOTOPATH.'/tmp');
 
 

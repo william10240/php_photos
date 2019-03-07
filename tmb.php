@@ -28,6 +28,9 @@ $finfo = finfo_open(FILEINFO_MIME);
 $mimetype = finfo_file($finfo, $imagePath);
 finfo_close($finfo);
 
+// var_dump($imagePath);
+// var_dump(file_exists($imagePath));
+
 
 header("Cache-control: max-age:36000");
 header("Content-type: " . $mimetype);

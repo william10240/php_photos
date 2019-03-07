@@ -59,7 +59,7 @@ sort($files);
     <br />
     <!--面包屑-->
     <ol class="breadcrumb">
-        <li><a href="<?PHP echo BASEURL; ?>">主页</a></li>
+        <li><a href="<?PHP echo BASEURL; ?>index.php">主页</a></li>
         <?PHP $lpath = '/';
         for ($i = 0; $i < count($fs); $i++) {
             $f = $fs[$i];
