@@ -20,7 +20,7 @@ services:
   ngx:
     image: nginx:1.14.0-alpine
     ports:
-      - 82:80
+      - 27006:80
     volumes:
       - ./conf.d/:/etc/nginx/conf.d
       - ./:/usr/share/nginx/html
