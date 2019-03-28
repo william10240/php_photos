@@ -8,8 +8,7 @@ services:
       # - 6379:6379
     restart: always
   ppp:
-    build: ./conf.d/
-    image: php:7.1.10-fpm
+    build: ./conf.d
     volumes:
       - ./conf.d:/usr/local/etc/php/conf.d
       - ./:/usr/share/nginx/html
